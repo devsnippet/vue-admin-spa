@@ -35,7 +35,6 @@
 	|           |-- Readme.vue           // 自述组件
 	|           |-- Upload.vue           // 图片上传
 	|           |-- VueEditor.vue        // 富文本编辑器
-	|           |-- VueTable.vue         // vue表格组件
 	|   |-- App.vue                      // 页面入口文件
 	|   |-- main.js                      // 程序入口文件，加载各种公共组件
 	|-- .babelrc                         // ES6语法编译配置
@@ -108,7 +107,7 @@
 
 
 ### Vue-Quill-Editor ###
-基于Quill、适用于Vue2的富文本编辑器。访问地址：[vue-quill-editor](https://github.com/surmon-china/vue-quill-editor)，这个我已经修改了源码，修改后插入图片用url替换base64  请用修改源码后的vue-quill-editor文件夹里面的editor.vue 替换\node_modules\vue-quill-editor里面的editor.vue；
+基于Quill、适用于Vue2的富文本编辑器。访问地址：[vue-quill-editor](https://github.com/surmon-china/vue-quill-editor)
 
 
 ```JavaScript
@@ -134,41 +133,6 @@
         }
 	}
 </script>
-```
-
-### Vue-SimpleMDE ###
-Vue.js的Markdown Editor组件。访问地址：[Vue-SimpleMDE](https://github.com/F-loat/vue-simplemde)
-
-```JavaScript
-<template>
-    <div>
-        <markdown-editor v-model="content" :configs="configs" ref="markdownEditor"></markdown-editor>
-    </div>
-</template>
-
-<script>
-    import { markdownEditor } from 'vue-simplemde';			// 导入markdownEditor组件
-    export default {
-        data: function(){
-            return {
-                content:'',									// markdown编辑器内容
-                configs: {									// markdown编辑器配置参数
-                    status: false,							// 禁用底部状态栏
-                    initialValue: 'Hello BBK',				// 设置初始值
-                    renderingConfig: {
-                        codeSyntaxHighlighting: true,		// 开启代码高亮
-                        highlightingTheme: 'atom-one-light' // 自定义代码高亮主题
-                    }
-                }
-            }
-        },
-        components: {
-            markdownEditor									// 声明组件markdownEditor
-        }
-    }
-</script>
-```
-
 ### Vue-Core-Image-Upload ###
 一款轻量级的vue上传插件，支持裁剪。访问地址：[Vue-Core-Image-Upload](https://github.com/Vanthink-UED/vue-core-image-upload)
 
@@ -293,4 +257,11 @@ import 'element-ui/lib/theme-default/index.css';    // 默认主题
 ```
 
 第三步：打开 src/components/common/Sidebar.vue 文件，找到 el-menu 标签，把 theme="dark" 去掉即可。
+
+### 三、vue-quill-editor富文本编辑器上传图片修改 ###
+
+```javascript
+找到文件夹'备份页面里面'的editor.vue文件替换\node_modules\vue-quill-editor里面的editor.vue
+```
+
 
