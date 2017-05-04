@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>manage-system</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="keywords" content="管理系统" />
+    <meta name="description" content="基于Vue2 + Element UI 的后台管理系统解决方案" />
+</head>
+
+<body>
+    <div id="app"></div>
+    <script src="./static/js/vendor.dll.js"></script>
+    <script>
+    // var _hmt = _hmt || [];
+    // (function() {
+    //     var hm = document.createElement("script");
+    //     hm.src = "https://hm.baidu.com/hm.js?1ad0a5c62a113bb874be8bb514b0a70d";
+    //     var s = document.getElementsByTagName("script")[0];
+    //     s.parentNode.insertBefore(hm, s);
+    // })();
+    // 阻止回车键提交表单
+    document.onkeydown = function(event) {
+        var target, code, tag;
+        if (!event) {
+            event = window.event; //针对ie浏览器  
+            target = event.srcElement;
+            code = event.keyCode;
+            if (code == 13) {
+                tag = target.tagName;
+                if (tag == "TEXTAREA") {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        } else {
+            target = event.target; //针对遵循w3c标准的浏览器，如Firefox  
+            code = event.keyCode;
+            if (code == 13) {
+                tag = target.tagName;
+                if (tag == "INPUT") {
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+        }
+    }
+    </script>
+</body>
+
+</html>
